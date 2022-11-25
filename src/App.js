@@ -79,7 +79,7 @@ function App() {
        
       } }
       />
-      <div className="">
+      <div className="flex flex-wrap justify-center">
        {employees.map((employees)=>{
         console.log(employees);
         return ( 
