@@ -2,6 +2,7 @@ import './index.css';
 import Home from './components/Home';
 import {useState} from 'react';
 import {v4 as uuidv4} from 'uuid'
+import Flip from 'react-reveal/Flip';
 
 
 function App() {
@@ -83,13 +84,14 @@ function App() {
        {employees.map((employees)=>{
         console.log(employees);
         return ( 
+        <Flip left>
         <Home 
         key={uuidv4()}
         name={employees.name}
         role={employees.role}
         img={employees.img}
      updateEmployee={updateEmployee}
-        />);
+        /> </Flip> );
 
       })}
       

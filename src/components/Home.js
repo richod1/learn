@@ -15,7 +15,7 @@ function Home(props) {
                 {props.role}
             </p>
             </div>
-            <EditEmployee/>
+            <EditEmployee name={props.name} role={props.role}/>
            
         </div>
 </div>

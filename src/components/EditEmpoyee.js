@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Flip from 'react-reveal/Flip';
 
-function EditEmployee() {
+function EditEmployee(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -23,6 +24,7 @@ function EditEmployee() {
           <Modal.Title>Update Employee</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+            <Flip left>
         <form id="editmodal" className="w-full max-w-sm">
      <div className="md:flex md:items-center mb-6">
     <div className="md:w-1/3">
@@ -31,7 +33,7 @@ function EditEmployee() {
       </label>
     </div>
     <div className="md:w-2/3">
-      <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="name" type="text" value="Degraft Frimpong"/>
+      <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="name" type="text" value={props.name}/>
     </div>
   </div>
   <div className="md:flex md:items-center mb-6">
@@ -41,10 +43,11 @@ function EditEmployee() {
       </label>
     </div>
     <div className="md:w-2/3">
-      <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="role" type="text" value="web dev"/>
+      <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="role" type="text" value={props.role}/>
     </div>
   </div>
 </form>
+</Flip>
   
         </Modal.Body>
         <Modal.Footer>
@@ -52,12 +55,16 @@ function EditEmployee() {
           {/* <Button variant="secondary" onClick={handleClose}>
             Close
           </Button> */}
+          <Flip left>
           <button onClick={handleClose} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" >Close
           
           </button>
+          </Flip>
+          <Flip left>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" form="editmodal">Update
           
           </button>
+          </Flip>
           
         </Modal.Footer>
       </Modal>
