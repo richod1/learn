@@ -1,6 +1,7 @@
 import './index.css';
 import Home from './components/Home';
 import {useState} from 'react';
+import {v4 as uuidv4} from 'uuid'
 
 
 function App() {
@@ -83,8 +84,7 @@ function App() {
         console.log(employees);
         return ( 
         <Home 
-        key={employees.id}
-        id={employees.id}
+        key={uuidv4()}
         name={employees.name}
         role={employees.role}
         img={employees.img}
