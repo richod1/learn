@@ -49,10 +49,15 @@ function EditEmployee() {
         </Modal.Body>
         <Modal.Footer>
             
-          <Button variant="secondary" onClick={handleClose}>
+          {/* <Button variant="secondary" onClick={handleClose}>
             Close
-          </Button>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" form="editmodal">Update</button>
+          </Button> */}
+          <button onClick={handleClose} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" >Close
+          
+          </button>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" form="editmodal">Update
+          
+          </button>
           
         </Modal.Footer>
       </Modal>
