@@ -1,6 +1,6 @@
 import React from 'react'
 import EditEmployee from './EditEmpoyee'
-import Flip from 'react-reveal/Flip';
+// import Flip from 'react-reveal/Flip';
 
 function Home(props) {
   return (
@@ -16,9 +16,9 @@ function Home(props) {
                 {props.role}
             </p>
             </div>
-            <Flip left>
+            
             <EditEmployee name={props.name} role={props.role} updateEmployee={props.updateEmployee} id={props.id}/>
-            </Flip>
+            
         </div>
 </div>
         

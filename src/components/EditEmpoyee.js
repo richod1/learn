@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Flip from 'react-reveal/Flip';
+// import Flip from 'react-reveal/Flip';
 
 function EditEmployee(props) {
   const [name, setName] = useState(props.name);
@@ -29,7 +29,7 @@ function EditEmployee(props) {
           <Modal.Title>Update Employee</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <Flip left>
+            
         <form  onSubmit={(e)=>{
             handleClose();
             e.preventDefault();
@@ -63,7 +63,7 @@ function EditEmployee(props) {
     </div>
   </div>
 </form>
-</Flip>
+
   
         </Modal.Body>
         <Modal.Footer>
@@ -71,14 +71,13 @@ function EditEmployee(props) {
           {/* <Button variant="secondary" onClick={handleClose}>
             Close
           </Button> */}
-          <Flip left>
+          
           <button onClick={handleClose} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" >Close
           
           </button>
-          </Flip>
-          <Flip left>
+          
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"  form="editmodal">Update</button>
-          </Flip>
+          
           
         </Modal.Footer>
       </Modal>
