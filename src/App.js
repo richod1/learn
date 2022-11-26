@@ -89,12 +89,12 @@ function App() {
   return (
     <div className="App bg-green-300">
      
-      <input type="text" onChange={(e)=>{ 
+      {/* <input type="text" onChange={(e)=>{ 
       // console.log(e.target.value);
       setRole(e.target.value);
        
       } }
-      />
+      /> */}
       <div className="">
        {employees.map((employees)=>{
         console.log(employees);
