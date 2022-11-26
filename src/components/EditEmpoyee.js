@@ -31,8 +31,9 @@ function EditEmployee(props) {
         <Modal.Body>
             <Flip left>
         <form  onSubmit={(e)=>{
+            handleClose();
             e.preventDefault();
-            //console.log("hello from edit employee");
+            //console.log("hello from edit employee")
             //console.log(props.id,name,role)
             props.updateEmployee(props.id,name,role);
         }}
@@ -76,7 +77,7 @@ function EditEmployee(props) {
           </button>
           </Flip>
           <Flip left>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleClose} form="editmodal">Update</button>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"  form="editmodal">Update</button>
           </Flip>
           
         </Modal.Footer>
