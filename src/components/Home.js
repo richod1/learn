@@ -17,7 +17,7 @@ function Home(props) {
             </p>
             </div>
             <Flip left>
-            <EditEmployee name={props.name} role={props.role}/>
+            <EditEmployee name={props.name} role={props.role} updateEmployee={props.updateEmployee} id={props.id}/>
             </Flip>
         </div>
 </div>

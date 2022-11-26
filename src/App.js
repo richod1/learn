@@ -70,7 +70,7 @@ function App() {
     });
     setEmployees(updatedEmployees);
     
-  }
+  }const showEmployees=true;
   return (
     <div className="App bg-green-300">
      
@@ -80,13 +80,14 @@ function App() {
        
       } }
       />
-      <div className="flex flex-wrap justify-center">
+      <div className="">
        {employees.map((employees)=>{
         console.log(employees);
         return ( 
         <Flip left>
         <Home 
-        key={uuidv4()}
+        key={employees.id}
+        id={employees.id}
         name={employees.name}
         role={employees.role}
         img={employees.img}
