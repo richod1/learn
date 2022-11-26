@@ -3,6 +3,7 @@ import Home from './components/Home';
 import {useState} from 'react';
 import {v4 as uuidv4} from 'uuid'
 import Flip from 'react-reveal/Flip';
+import AddEmployee from './components/AddEmpoyee';
 
 
 function App() {
@@ -69,7 +70,21 @@ function App() {
 
     });
     setEmployees(updatedEmployees);
+
     
+    }
+    function newEmployee(name, role, img){
+      const newEmployee={
+        id:uuidv4(),
+        name:name,
+        role:role,
+        img:img
+      };
+      setEmployees([...employees,newEmployee])
+
+
+
+
   }const showEmployees=true;
   return (
     <div className="App bg-green-300">
@@ -98,6 +113,7 @@ function App() {
       
       
       </div>
+      <AddEmployee newEmployee={newEmployee}/>
       
      
       
